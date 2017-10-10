@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/movies/movies",
+    "pages/stars/stars",
+    "pages/news/news"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  }
+}
