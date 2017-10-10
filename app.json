@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/movies/movies",
-    "pages/stars/stars",
     "pages/news/news"
   ],
   "window": {
