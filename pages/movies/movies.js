@@ -62,5 +62,9 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  redirectToSearch(){
+    console.log("跳转到搜索页")
   }
 })

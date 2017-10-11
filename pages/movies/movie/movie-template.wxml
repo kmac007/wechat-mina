@@ -2,7 +2,7 @@
 <template name="movieTemplate">
   <view class='movie-container'>
     <image src='http://img3.doubanio.com/view/movie_poster_cover/ipst/public/p494268647.webp' class='movie-img'></image>
-    <text class='movie-title'>xxx</text>
+    <text class='movie-title'>111</text>
     <template is="starsTemplate"></template>
   </view>
 </template>

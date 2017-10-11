@@ -1,5 +1,23 @@
 @import "../movie/movie-template.wxss";
-.movies-container{
+
+.movie-list-container{
+  margin: 20px 0;
+}
+
+.movie-head{
   display: flex;
-  
+  justify-content: space-between;
+}
+
+.movies-scroll{
+  display: flex;
+  height: 400rpx;
+  white-space: nowrap;
+}
+
+.slogan{
+  font-size: 16px;
+  line-height: 1;
+  border-left: 3px solid #42bd56;
+  height: 16px;
 }
