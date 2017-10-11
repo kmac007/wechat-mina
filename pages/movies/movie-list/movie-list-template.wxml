@@ -1,15 +1,17 @@
 <import src="../movie/movie-template.wxml" />
 <template name="movieListTemplate">
-  <view>
-    <view>
-      <text>正在热映</text>
-      <view>
-        <text>更多</text>
-        <text>></text>
+  <view class='movie-list-container'>
+    <view class='movie-head'>
+      <text class='slogan'>正在热映</text>
+      <view class='more'>
+        <text class='more-text'>更多</text>
+        <text class='more-img'>></text>
       </view>
     </view>
-    <template is="movieTemplate"></template>
-    <template is="movieTemplate"></template>
-    <template is="movieTemplate"></template>
+    <view class='movies-container'>
+      <template is="movieTemplate"></template>
+      <template is="movieTemplate"></template>
+      <template is="movieTemplate"></template>
+    </view>
   </view>
 </template>

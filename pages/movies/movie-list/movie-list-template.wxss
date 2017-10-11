@@ -1,1 +1,5 @@
-@import "../movie/movie-template.wxss"
+@import "../movie/movie-template.wxss";
+.movies-container{
+  display: flex;
+  
+}

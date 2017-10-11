@@ -5,8 +5,24 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#42bd56",
+    "navigationBarTitleText": "黑骑",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/news/news",
+        "text": "新闻",
+        "iconPath": "images/icon/news-icon.png",
+        "selectedIconPath": "images/icon/news-icon-selected.png"
+      },
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "电影",
+        "iconPath": "images/icon/movie-icon.png",
+        "selectedIconPath": "images/icon/movie-icon-selected.png"
+      }
+    ]
   }
 }

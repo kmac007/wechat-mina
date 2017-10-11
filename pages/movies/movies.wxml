@@ -1,2 +1,12 @@
-<import src="movie-list/movie-list-template.wxml"/>
+<import src="movie-list/movie-list-template.wxml" />
+
+<view class='search-container'>
+  <view class='search'>
+    <icon type="search" size='13' class='search-icon'/>
+    <text class='search-text'>搜索</text>
+  </view>
+</view>
+
+<template is="movieListTemplate"></template>
+<template is="movieListTemplate"></template>
 <template is="movieListTemplate"></template>

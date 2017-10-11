@@ -1,8 +1,8 @@
 <import src="../stars/stars-template.wxml" />
 <template name="movieTemplate">
-  <view>
-    <image src='http://img3.doubanio.com/view/movie_poster_cover/ipst/public/p494268647.webp'></image>
-    <text>xxx</text>
+  <view class='movie-container'>
+    <image src='http://img3.doubanio.com/view/movie_poster_cover/ipst/public/p494268647.webp' class='movie-img'></image>
+    <text class='movie-title'>xxx</text>
     <template is="starsTemplate"></template>
   </view>
 </template>
