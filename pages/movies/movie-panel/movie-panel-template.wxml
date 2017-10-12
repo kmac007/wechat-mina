@@ -1,8 +1,8 @@
 <import src="../movie/movie-template.wxml"></import>
 <template name="moviePanel">
-  <view class='movie-panel-container'>
-    <block wx:for="{{subjects}}" wx:for-item="item">
+  <scroll-view class='movie-panel-container' bindscrolltolower="handleLoadMore" scroll-y>
+    <block wx:for="{{subjects}}" wx:for-item="item" wx:key="{{id}}">
       <template is="movieTemplate" data="{{...item}}"></template>
     </block>
-  </view>
+  </scroll-view>
 </template>

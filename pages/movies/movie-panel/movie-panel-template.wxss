@@ -1,5 +1,5 @@
 @import "../movie/movie-template.wxss";
 .movie-panel-container{
-
+  height: 1200rpx;
 }
 

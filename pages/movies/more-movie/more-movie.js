@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    title: '',
+    isLoadingMore: false,
+    start: 0,
     subjects: {}
   },
 
@@ -14,8 +15,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading({
+      title: '加载中',
+    })
     this.setData({
-      title: options.category
+      category: options.category,
+      start: 0
+    })
+    wx.setNavigationBarTitle({
+      title: options.category,
     })
     var api = 'https://api.douban.com/v2/movie/'
     var url = ''
@@ -38,9 +46,6 @@ Page({
       },
       success(res) {
         that.handleStars(res.data)
-        // that.setData({
-        //   subjects: res.data.subjects
-        // })
       }
     })
 
@@ -103,5 +108,38 @@ Page({
     this.setData({
       subjects: data.subjects
     })
+    wx.hideLoading()
   },
+  //跳转到详情页
+  redirectToDetail(e) {
+    var id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `../movie-detail/movie-detail?id=${id}`,
+    })
+  },
+  //加载更多
+  handleLoadMore() {
+    var api = 'https://api.douban.com/v2/movie/'
+    var url = ''
+    setTimeout(() => {
+      if (!this.isLoadingMore) {
+        switch (this.category) {
+          case '正在热映':
+            url = `${api}in_theaters`
+            break
+          case '近期上映':
+            url = `${api}coming_soon`
+            break
+          case 'Top250':
+            url = `${api}top250`
+            break
+        }
+        console.log('123')
+      }
+    }, 300)
+      this.setData({
+        isLoadingMore: true
+      })
+
+  }
 })

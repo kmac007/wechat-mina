@@ -28,10 +28,10 @@
     <text>{{movie.genres}}</text>
     <text decode='true'>{{movie.year}}({{movie.countries}})上映&nbsp;{{movie.countries}}</text>
     <view class='credits'>
-      <block wx:for="{{movie.directors}}" wx:for-item="item" ex:key="{{movie.directors.id}}">
+      <block wx:for="{{movie.directors}}" wx:for-item="item" wx:key="{{movie.directors.id}}">
         <text decode='true'>{{item.name}}(导演)&nbsp;/&nbsp;</text>
       </block>
-      <block wx:for="{{movie.casts}}" wx:for-item="item" ex:key="{{movie.casts.id}}">
+      <block wx:for="{{movie.casts}}" wx:for-item="item" wx:key="{{movie.casts.id}}">
         <text decode='true'>{{item.name}}&nbsp;/&nbsp;</text>
       </block>
       <text>等</text>
@@ -53,7 +53,7 @@
     <scroll-view class='movies-scroll' scroll-x="true">
       <block wx:for="{{movie.directors}}" wx:key='id' wx:for-item="item">
         <view class='filmmaker-card'>
-          <image src='{{item.avatars.small}}' class='filmmaker-card-img'></image>
+          <image lazy-load='true' src='{{item.avatars.small}}' class='filmmaker-card-img'></image>
           <view class='filmmaker-info'>
             <text class='filmmaker-info-name'>{{item.name}}</text>
             <text class='filmmaker-info-type'>导演</text>

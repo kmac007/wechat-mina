@@ -81,6 +81,5 @@ Page({
     this.setData({
       movie: data
     })
-  },
-
+  }
 })

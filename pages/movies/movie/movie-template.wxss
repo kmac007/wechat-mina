@@ -1,13 +1,18 @@
 @import "../stars/stars-template.wxss";
 
 .movie-container {
-  padding-right: 25rpx;
+  margin-right: 25rpx;
   display: inline-block;
   width: 200rpx;
 }
 
+.movie-container:active{
+  background-color: #e3e3e3;
+  opacity: .8;
+}
+
 .movie-container:first-child{
-  padding-left: 25rpx;
+  margin-left: 25rpx;
 }
 
 .movie-img {
