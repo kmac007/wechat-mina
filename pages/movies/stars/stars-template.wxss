@@ -13,6 +13,11 @@
 
 .stars image {
   padding-left: 3rpx;
-  height: 17rpx;
-  width: 17rpx;
+  height: 18rpx;
+  width: 18rpx;
+}
+
+.point{
+  font-size: 9px;
+  color: #bcbcbc;
 }

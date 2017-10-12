@@ -3,10 +3,14 @@
 
   <view class='movie-list-container'>
     <view class='movie-head'>
-      <view class='slogan'>正在热映</view>
-      <view class='more'>
-        <text class='more-text'>更多</text>
-        <text class='more-img'>></text>
+      <view class='slogan'>
+        <text>正在热映</text>
+      </view>
+      <view class='more' bindtap='handleMoreMovie'>
+        <view class='more-text'>
+          <text>更多</text>
+        </view>
+        <image src='../../images/icon/arrow-right.png' class='more-img'></image>
       </view>
     </view>
     <view class='movies-container'>
@@ -14,7 +18,7 @@
         <template is="movieTemplate"></template>
         <template is="movieTemplate"></template>
         <template is="movieTemplate"></template>
-                <template is="movieTemplate"></template>
+        <template is="movieTemplate"></template>
         <template is="movieTemplate"></template>
         <template is="movieTemplate"></template>
       </scroll-view>
