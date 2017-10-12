@@ -1,0 +1,6 @@
+@import "../search-container/search-container-template.wxss";
+@import "../movie-panel/movie-panel-template.wxss";
+
+.movie-container{
+  padding: 40rpx 25rpx;
+}

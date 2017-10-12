@@ -80,8 +80,10 @@ Page({
   },
 
   //更多电影
-  handleMoreMovie() {
-    console.log('更多电影')
+  handleMoreMovie(e) {
+    wx.navigateTo({
+      url: `more-movie/more-movie?category=${e.currentTarget.dataset.id}`,
+    })
   },
 
   //获取电影条目信息
@@ -132,5 +134,12 @@ Page({
         break;
     }
     wx.hideLoading()
+  },
+  //跳转到详情页
+  redirectToDetail(e){
+    var id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `movie-detail/movie-detail?id=${id}`,
+    })
   }
 })

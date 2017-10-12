@@ -1,7 +1,6 @@
 @import "../stars/stars-template.wxss";
 
 .movie-container {
-  flex-direction: column;
   padding-right: 25rpx;
   display: inline-block;
   width: 200rpx;
@@ -22,4 +21,7 @@
   font-size: 14px;
   display: block;
   color: #3c3c3c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

@@ -1,0 +1,8 @@
+<import src="../movie/movie-template.wxml"></import>
+<template name="moviePanel">
+  <view class='movie-panel-container'>
+    <block wx:for="{{subjects}}" wx:for-item="item">
+      <template is="movieTemplate" data="{{...item}}"></template>
+    </block>
+  </view>
+</template>

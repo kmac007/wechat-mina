@@ -6,7 +6,7 @@
       <view class='slogan'>
         <text>{{title}}</text>
       </view>
-      <view class='more' bindtap='handleMoreMovie'>
+      <view class='more' bindtap='handleMoreMovie' data-id="{{title}}">
         <view class='more-text'>
           <text>更多</text>
         </view>

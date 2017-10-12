@@ -1,11 +1,7 @@
 <import src="movie-list/movie-list-template.wxml" />
+<import src="search-container/search-container-template.wxml"/>
 
-<view class='search-container'>
-  <view class='search' bindtap='redirectToSearch'>
-    <icon type="search" size='13' class='search-icon'/>
-    <text class='search-text'>搜索</text>
-  </view>
-</view>
+<template is="search"/>
 
 <template is="movieListTemplate" data="{{...in_theaters}}"></template>
 <template is="movieListTemplate" data="{{...coming_soon}}"></template>

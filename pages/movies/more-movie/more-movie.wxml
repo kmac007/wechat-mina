@@ -1,0 +1,4 @@
+<import src="../search-container/search-container-template.wxml"/>
+<import src="../movie-panel/movie-panel-template.wxml"/>
+<template is="search"/>
+<template is="moviePanel" data="{{subjects}}"/>

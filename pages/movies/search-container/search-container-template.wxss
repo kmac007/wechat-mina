@@ -1,0 +1,27 @@
+.search-container {
+  background-color: #42bd56;
+  overflow: hidden;
+}
+
+.search {
+  margin: 20rpx;
+  display: flex;
+  background-color: #fff;
+  border-radius: 10rpx;
+  justify-content: center;
+  align-items: center;
+  height: 50rpx;
+  color: #b3b3b3;
+}
+
+.search-icon{
+  margin-right: 5px;
+}
+
+.search-text{
+  font-size: 13px;
+}
+
+.search:active{
+  background-color: #e6e6e6;
+}

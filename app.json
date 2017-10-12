@@ -1,7 +1,9 @@
 {
   "pages": [
+    "pages/news/news",
     "pages/movies/movies",
-    "pages/news/news"
+    "pages/movies/more-movie/more-movie",
+    "pages/movies/movie-detail/movie-detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
