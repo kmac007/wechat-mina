@@ -1,12 +1,13 @@
 <template name="starsTemplate">
-  <view class='stars-container'>
+  <view class='stars-container' wx:if="{{average}}">
     <view class='stars'>
-      <image src='/images/icon/star-full.png'></image>
-      <image src='/images/icon/star-full.png'></image>
-      <image src='/images/icon/star-full.png'></image>
-      <image src='/images/icon/star-full.png'></image>
-      <image src='/images/icon/star-full.png'></image>
+    <block wx:for="{{stars}}" wx:for-item="i" wx>
+      <image wx:if="{{i==1}}"src='/images/icon/star-full.png'></image>
+      <image wx:elif="{{i==0}}"src='/images/icon/star.png'></image>
+      <image wx:else src='/images/icon/star-half.png'></image>
+    </block>
     </view>
-    <text class='point'>8.9</text>
+    <text class='point'>{{average}}</text>
   </view>
+  <view wx:else class='point'>暂无评分</view>
 </template>

@@ -4,7 +4,7 @@
   <view class='movie-list-container'>
     <view class='movie-head'>
       <view class='slogan'>
-        <text>正在热映</text>
+        <text>{{title}}</text>
       </view>
       <view class='more' bindtap='handleMoreMovie'>
         <view class='more-text'>
@@ -15,12 +15,15 @@
     </view>
     <view class='movies-container'>
       <scroll-view class='movies-scroll' scroll-x="true">
+        <block wx:for="{{subjects}}" wx:key='id' wx:for-item="item">
+        <template is="movieTemplate" data="{{...item}}"></template>
+        </block>
+        <!-- <template is="movieTemplate"></template>
         <template is="movieTemplate"></template>
         <template is="movieTemplate"></template>
         <template is="movieTemplate"></template>
         <template is="movieTemplate"></template>
-        <template is="movieTemplate"></template>
-        <template is="movieTemplate"></template>
+        <template is="movieTemplate"></template> -->
       </scroll-view>
     </view>
   </view>
