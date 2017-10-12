@@ -1,2 +1,74 @@
-<!--pages/movies/movie-detail/movie-detail.wxml-->
-<text>pages/movies/movie-detail/movie-detail.wxml</text>
+<import src="../stars/stars-template.wxml" />
+<view wx:if="{{movie.images}}" class='movie-detail-container'>
+  <view class='banner-img-cover'></view>
+  <image wx:if="{{movie.images.small}}" src='{{movie.images.small}}' class='banner-img' mode='aspectFill'></image>
+
+  <view class='hover-container'>
+    <view>
+      <image class="hover-img" wx:if="{{movie.images.small}}" src='{{movie.images.small}}'></image>
+    </view>
+    <view class='hover-content'>
+      <view class='hover-title'>
+        <text>{{movie.title}}</text>
+      </view>
+      <view class='hover-rating'>
+        <text class='hover-rating-average' wx:if="{{movie.rating.average}}">{{movie.rating.average}}</text>
+        <view class='hover-comments'>
+          <template is="starsTemplate" data="{{...movie.rating}}" />
+          <view class='hover-comments-text'>
+            <text>{{movie.comments_count}}人评价</text>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class='meta'>
+    <text>{{movie.genres}}</text>
+    <text decode='true'>{{movie.year}}({{movie.countries}})上映&nbsp;{{movie.countries}}</text>
+    <view class='credits'>
+      <block wx:for="{{movie.directors}}" wx:for-item="item" ex:key="{{movie.directors.id}}">
+        <text decode='true'>{{item.name}}(导演)&nbsp;/&nbsp;</text>
+      </block>
+      <block wx:for="{{movie.casts}}" wx:for-item="item" ex:key="{{movie.casts.id}}">
+        <text decode='true'>{{item.name}}&nbsp;/&nbsp;</text>
+      </block>
+      <text>等</text>
+    </view>
+  </view>
+
+  <view class='subject-mark'>
+    <view>想看</view>
+    <view>看过</view>
+  </view>
+
+  <view class='movie-title-brief'>{{movie.title}}的剧情简介</view>
+
+  <view class='movie-summary'>{{movie.summary}}</view>
+
+  <view class='movie-title-brief'>影人</view>
+
+  <view class='filmmaker'>
+    <scroll-view class='movies-scroll' scroll-x="true">
+      <block wx:for="{{movie.directors}}" wx:key='id' wx:for-item="item">
+        <view class='filmmaker-card'>
+          <image src='{{item.avatars.small}}' class='filmmaker-card-img'></image>
+          <view class='filmmaker-info'>
+            <text class='filmmaker-info-name'>{{item.name}}</text>
+            <text class='filmmaker-info-type'>导演</text>
+          </view>
+        </view>
+      </block>
+      <block wx:for="{{movie.casts}}" wx:key='id' wx:for-item="item">
+        <view class='filmmaker-card'>
+          <image src='{{item.avatars.small}}' class='filmmaker-card-img'></image>
+          <view class='filmmaker-info'>
+            <text class='filmmaker-info-name'>{{item.name}}</text>
+            <text class='filmmaker-info-type'>演员</text>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

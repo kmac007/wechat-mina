@@ -2,7 +2,7 @@
 <template name="movieListTemplate">
 
   <view class='movie-list-container'>
-    <view class='movie-head'>
+    <view class='movie-head' wx:if="{{title}}">
       <view class='slogan'>
         <text>{{title}}</text>
       </view>
@@ -18,12 +18,6 @@
         <block wx:for="{{subjects}}" wx:key='id' wx:for-item="item">
         <template is="movieTemplate" data="{{...item}}"></template>
         </block>
-        <!-- <template is="movieTemplate"></template>
-        <template is="movieTemplate"></template>
-        <template is="movieTemplate"></template>
-        <template is="movieTemplate"></template>
-        <template is="movieTemplate"></template>
-        <template is="movieTemplate"></template> -->
       </scroll-view>
     </view>
   </view>

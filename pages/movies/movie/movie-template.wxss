@@ -25,3 +25,12 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.point{
+  font-size: 9px;
+  color: #bcbcbc;
+}
+
+.movie-rating{
+  display: flex;
+}

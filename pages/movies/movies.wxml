@@ -1,8 +1,8 @@
 <import src="movie-list/movie-list-template.wxml" />
-<import src="search-container/search-container-template.wxml"/>
+<import src="search-container/search-container-template.wxml" />
 
-<template is="search"/>
+<template is="search" />
 
-<template is="movieListTemplate" data="{{...in_theaters}}"></template>
-<template is="movieListTemplate" data="{{...coming_soon}}"></template>
-<template is="movieListTemplate" data="{{...top250}}"></template>
+  <template is="movieListTemplate" data="{{...in_theaters}}"></template>
+  <template is="movieListTemplate" data="{{...coming_soon}}"></template>
+  <template is="movieListTemplate" data="{{...top250}}"></template>

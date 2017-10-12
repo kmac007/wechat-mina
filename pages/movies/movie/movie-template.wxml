@@ -3,6 +3,10 @@
   <view class='movie-container' bindtap='redirectToDetail' data-id='{{id}}'>
     <image src='{{images.small}}' class='movie-img'></image>
     <text class='movie-title'>{{title}}</text>
-    <template is="starsTemplate" data="{{...rating}}"></template>
+    <view class='movie-rating'>
+      <template is="starsTemplate" data="{{...rating}}"></template>
+      <text wx:if="{{rating.average}}"class='point'>{{rating.average}}</text>
+    </view>
+
   </view>
 </template>

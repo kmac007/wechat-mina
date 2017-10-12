@@ -1,1 +1,161 @@
-/* pages/movies/movie-detail/movie-detail.wxss */
+@import "../stars/stars-template.wxss";
+
+.movie-detail-container {
+  position: relative;
+}
+
+.banner-img {
+  width: 100%;
+  height: 360rpx;
+}
+
+.banner-img-cover {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 360rpx;
+}
+
+.hover-title {
+  color: #fff;
+  font-size: 20px;
+  margin-top: 40rpx;
+  margin-bottom: 30rpx;
+}
+
+.hover-img {
+  width: 200rpx;
+  height: 280rpx;
+}
+
+.hover-content {
+  margin-left: 32rpx;
+}
+
+.hover-container {
+  position: absolute;
+  top: 120rpx;
+  left: 30rpx;
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+}
+
+.hover-rating {
+  display: flex;
+}
+
+.hover-rating-average {
+  font-size: 28px;
+  color: #fff;
+  margin-right: 20rpx;
+}
+
+.hover-comments {
+  color: #e9e9e9;
+  font-size: 10px;
+}
+
+.stars image {
+  height: 23rpx;
+  width: 23rpx;
+  padding-left: 0;
+}
+
+.hover-comments-text {
+  margin-top: 20rpx;
+}
+
+.meta {
+  margin-top: 84rpx;
+  display: flex;
+  flex-direction: column;
+  color: #353535;
+  font-size: 14px;
+  line-height: 1.6;
+  justify-content: space-around;
+  padding: 0 30rpx;
+}
+
+.subject-mark {
+  display: flex;
+  justify-content: space-around;
+  margin: 50rpx 0;
+}
+
+.subject-mark>view {
+  color: #ffac2e;
+  border: 2rpx solid #ffac2e;
+  border-radius: 12rpx;
+  width: 325rpx;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 18rpx 0;
+  font-size: 14px;
+}
+
+.subject-mark>view:active {
+  color: #fff;
+  background-color: #ffac2e;
+}
+
+.movie-title-brief {
+  font-size: 14px;
+  color: #b3b3b3;
+  margin: 0 32rpx;
+}
+
+.movie-summary {
+  font-size: 14px;
+  color: #353535;
+  line-height: 1.6;
+  margin: 32rpx 32rpx;
+}
+
+.filmmaker {
+  overflow: scroll;
+  width: 100%;
+  margin: 32rpx 32rpx;
+  font-size: 14px;
+  white-space: nowrap;
+  color: #353535;
+  text-align: center;
+}
+
+.filmmaker-card {
+  width: 200rpx;
+  display: inline-block;
+  padding: 0 20rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.filmmaker-card:first-child {
+  padding-left: 0;
+}
+
+.filmmaker-card-img {
+   width: 200rpx;
+  height: 270rpx;
+  padding-bottom: 10rpx;
+}
+
+.filmmaker-info{
+  display: flex;
+  flex-direction: column;
+}
+
+.filmmaker-info>text{
+  margin-top: 16rpx;
+}
+
+.filmmaker-info-type{
+  color: #b3b3b3;
+}
+
+.filmmaker-info-name{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

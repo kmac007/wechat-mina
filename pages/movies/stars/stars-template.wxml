@@ -7,7 +7,7 @@
       <image wx:else src='/images/icon/star-half.png'></image>
     </block>
     </view>
-    <text class='point'>{{average}}</text>
+
   </view>
   <view wx:else class='point'>暂无评分</view>
 </template>
