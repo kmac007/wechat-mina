@@ -1,4 +1,9 @@
-<import src="../search-container/search-container-template.wxml"/>
-<import src="../movie-panel/movie-panel-template.wxml"/>
-<template is="search"/>
-<template is="moviePanel" data="{{subjects}}"/>
+<import src="../search-container/search-container-template.wxml" />
+<import src="../movie-panel/movie-panel-template.wxml" />
+<template is="search" />
+<template is="moviePanel" data="{{subjects}}" />
+<view wx:if="{{isLoadingMore}}">
+  <view wx:if="{{hasMoreMovie}}" class='more-movie-loading'>
+    <image src='../../../images/icon/more-movie-loading.png'></image>
+  </view>
+</view>

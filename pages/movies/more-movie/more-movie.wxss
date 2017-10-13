@@ -1,6 +1,41 @@
 @import "../search-container/search-container-template.wxss";
 @import "../movie-panel/movie-panel-template.wxss";
 
-.movie-container{
+.movie-container {
   margin: 40rpx 25rpx;
+}
+
+.more-movie-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more-movie-loading>image {
+  width: 40rpx;
+  height: 40rpx;
+  animation: rotate 5s infinite;
+  margin-bottom: 40rpx;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  25% {
+    transform: rotate(360deg);
+  }
 }

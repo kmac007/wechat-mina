@@ -8,7 +8,9 @@ Page({
   data: {
     isLoadingMore: false,
     start: 0,
-    subjects: {}
+    subjects: {},
+    hasMoreMovie: true,
+    total: 0
   },
 
   /**
@@ -26,18 +28,7 @@ Page({
       title: options.category,
     })
     var api = 'https://api.douban.com/v2/movie/'
-    var url = ''
-    switch (options.category) {
-      case '正在热映':
-        url = `${api}in_theaters`
-        break
-      case '近期上映':
-        url = `${api}coming_soon`
-        break
-      case 'Top250':
-        url = `${api}top250`
-        break
-    }
+    var url = this.switchApiAddress(options.category, api)
     var that = this
     wx.request({
       url: url,
@@ -46,9 +37,11 @@ Page({
       },
       success(res) {
         that.handleStars(res.data)
+        that.setData({
+          total: res.data.total
+        })
       }
     })
-
   },
 
   /**
@@ -118,28 +111,64 @@ Page({
     })
   },
   //加载更多
-  handleLoadMore() {
+  handleLoadMore(e) {
+    wx.showNavigationBarLoading()
     var api = 'https://api.douban.com/v2/movie/'
-    var url = ''
-    setTimeout(() => {
-      if (!this.isLoadingMore) {
-        switch (this.category) {
-          case '正在热映':
-            url = `${api}in_theaters`
-            break
-          case '近期上映':
-            url = `${api}coming_soon`
-            break
-          case 'Top250':
-            url = `${api}top250`
-            break
-        }
-        console.log('123')
-      }
-    }, 300)
+    if (!this.data.isLoadingMore) {
       this.setData({
         isLoadingMore: true
       })
+      var url = this.switchApiAddress(this.data.category, api)
+      var that = this
+      var start = this.data.start += 20
+      if (this.data.subjects.length >= this.data.total) {
+        this.setData({
+          hasMoreMovie: false
+        })
+        return
+      }
+      wx.request({
+        url: url,
+        data: {
+          start: start,
+        },
+        header: {
+          'content-type': 'json'
+        },
+        success(res) {
+          var totalSubjects = that.data.subjects
+          var newSubjects = res.data.subjects
+          // 将新获得的subjects的stars改变为数组
+          for (var i = 0; i < newSubjects.length; i++) {
+            newSubjects[i].rating.stars = util.convertStarsToArray(newSubjects[i].rating.stars)
+          }
+          //合并到原数组中
+          var nextSubjects = totalSubjects.concat(newSubjects)
+          that.setData({
+            isLoadingMore: false,
+            start: start,
+            subjects: nextSubjects
+          })
+          wx.hideNavigationBarLoading()
+        }
+      })
 
+    }
+  },
+  //由类别选择访问相应的API
+  switchApiAddress(category, api) {
+    var url = ''
+    switch (category) {
+      case '正在热映':
+        url = `${api}in_theaters`
+        break
+      case '近期上映':
+        url = `${api}coming_soon`
+        break
+      case 'Top250':
+        url = `${api}top250`
+        break
+    }
+    return url
   }
 })
