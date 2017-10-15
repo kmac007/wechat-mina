@@ -1,0 +1,18 @@
+<view class="about-container">
+
+  <image class="avatar" src='https://avatars0.githubusercontent.com/u/20530795?s=460&v=4'></image>
+
+  <view class='about'>
+    <view class='about-info'>
+      <text>作者: kmac007</text>
+      <text>Github: https://github.com/kmac007</text>
+      <text>Blog: https://kmac007.me</text>
+      <text>项目地址: https://github.com/kmac007/wechat-mina</text>
+    </view>
+    <view>
+      本项目为豆瓣的非官方小程序，使用了豆瓣提供的开放API，本着学习小程序的目的来写的一个微信小程序。
+    </view>
+  </view>
+
+
+</view>

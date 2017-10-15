@@ -1,31 +1,31 @@
 {
   "pages": [
-    "pages/news/news",
     "pages/movies/movies",
     "pages/movies/more-movie/more-movie",
     "pages/movies/movie-detail/movie-detail",
-    "pages/movies/search-page/search-page"
+    "pages/movies/search-page/search-page",
+    "pages/about/about"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#42bd56",
-    "navigationBarTitleText": "黑骑",
+    "navigationBarTitleText": "黑骑电影",
     "navigationBarTextStyle": "#fff",
     "enablePullDownRefresh": true
   },
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/news/news",
-        "text": "新闻",
-        "iconPath": "images/icon/news-icon.png",
-        "selectedIconPath": "images/icon/news-icon-selected.png"
-      },
-      {
         "pagePath": "pages/movies/movies",
         "text": "电影",
         "iconPath": "images/icon/movie-icon.png",
         "selectedIconPath": "images/icon/movie-icon-selected.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "images/icon/about-icon.png",
+        "selectedIconPath": "images/icon/about-icon-selected.png"
       }
     ]
   }
