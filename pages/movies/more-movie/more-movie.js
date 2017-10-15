@@ -169,5 +169,11 @@ Page({
         break
     }
     return url
-  }
+  },
+  //跳转到搜索页
+  redirectToSearch() {
+    wx.navigateTo({
+      url: '../search-page/search-page',
+    })
+  },
 })

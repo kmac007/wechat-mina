@@ -10,7 +10,7 @@
   border-radius: 10rpx;
   justify-content: center;
   align-items: center;
-  height: 50rpx;
+  height: 58rpx;
   color: #b3b3b3;
 }
 

@@ -1,0 +1,9 @@
+<template name="search-list">
+  <view class='search-list-container' data-id='{{id}}' bindtap='redirectToDetail'>
+    <image src='{{img}}' class='search-list-img'></image>
+    <view class='search-item-info'>
+      <view class='search-item-title'>{{title}}</view>
+      <view class='search-item-rating'>{{rating}} / {{year}}</view>
+    </view>
+  </view>
+</template>

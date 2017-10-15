@@ -1,1 +1,34 @@
-/* pages/movies/search-page/search-page.wxss */
+@import "./search-list/search-list-template.wxss";
+
+.search-header-icon {
+  position: absolute;
+  left: 32rpx;
+}
+
+.search-header {
+  position: relative;
+  background-color: #42bd56;
+  display: flex;
+  align-items: center;
+}
+
+.search-header-input {
+  color: #b3b3b3;
+  margin: 20rpx;
+  height: 58rpx;
+  margin-left: 16rpx;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  width: 635rpx;
+  font-size: 14px;
+  margin-right: 22rpx;
+  padding-left: 58rpx;
+  background-color: #fff;
+}
+
+.search-cancel {
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  right: 22rpx;
+}

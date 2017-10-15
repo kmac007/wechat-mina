@@ -1,1 +1,12 @@
-<view>搜索</view>
+<import src="./search-list/search-list-template" />
+
+<view class="search-header">
+  <icon type="search" size='13' class='search-header-icon' />
+  <input placeholder='搜索' class='search-header-input' bindconfirm="search"></input>
+  <view bindtap='cancel' class='search-cancel'>取消</view>
+</view>
+<view class='search-list'>
+ <block wx:for="{{subjects}}" wx:for-item="item" wx:key="{{item.id}}">
+  <template is="search-list" data="{{...item}}"/>
+</block> 
+</view>

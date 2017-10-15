@@ -3,6 +3,6 @@
 
 <template is="search" />
 
-  <template is="movieListTemplate" data="{{...in_theaters}}"></template>
-  <template is="movieListTemplate" data="{{...coming_soon}}"></template>
-  <template is="movieListTemplate" data="{{...top250}}"></template>
+<template is="movieListTemplate" data="{{...in_theaters}}"></template>
+<template is="movieListTemplate" data="{{...coming_soon}}"></template>
+<template is="movieListTemplate" data="{{...top250}}"></template>
