@@ -1,27 +1,26 @@
-.about-container{
+.about-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 14px;
-  color: #444444;
+  color: #444;
 }
 
-.avatar{
+.avatar {
   margin-top: 40rpx;
   width: 280rpx;
   height: 280rpx;
 }
 
-.about{
+.about {
   padding: 40rpx;
 }
 
-.about-info{
+.about-info {
   padding-bottom: 20rpx;
 }
 
-.about-info>text{
+.about-info>text {
   display: block;
 }
-
