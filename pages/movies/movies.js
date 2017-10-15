@@ -76,7 +76,9 @@ Page({
 
   //跳转到搜索页
   redirectToSearch() {
-    console.log("跳转到搜索页")
+    wx.navigateTo({
+      url: 'search-page/search-page',
+    })
   },
 
   //更多电影

@@ -3,13 +3,15 @@
     "pages/news/news",
     "pages/movies/movies",
     "pages/movies/more-movie/more-movie",
-    "pages/movies/movie-detail/movie-detail"
+    "pages/movies/movie-detail/movie-detail",
+    "pages/movies/search-page/search-page"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#42bd56",
     "navigationBarTitleText": "黑骑",
-    "navigationBarTextStyle": "#fff"
+    "navigationBarTextStyle": "#fff",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "list": [

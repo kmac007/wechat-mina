@@ -112,7 +112,6 @@ Page({
   },
   //加载更多
   handleLoadMore(e) {
-    wx.showNavigationBarLoading()
     var api = 'https://api.douban.com/v2/movie/'
     if (!this.data.isLoadingMore) {
       this.setData({
@@ -127,6 +126,7 @@ Page({
         })
         return
       }
+      wx.showNavigationBarLoading()
       wx.request({
         url: url,
         data: {
@@ -152,7 +152,6 @@ Page({
           wx.hideNavigationBarLoading()
         }
       })
-
     }
   },
   //由类别选择访问相应的API
