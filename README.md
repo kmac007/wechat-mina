@@ -6,4 +6,15 @@
 微信开发者工具v1.01.170925
 
 # 项目预览
-<div align="center"><img src="https://kmac007.b0.upaiyun.com/react-news-app/pc-index.gif" alt="pc"/></div>
+<div align="center"><img src="https://github.com/kmac007/wechat-mina/blob/master/preview/mina-1.gif" alt="pc"/></div>
+<div align="center"><img src="https://github.com/kmac007/wechat-mina/blob/master/preview/mina-2.gif" alt="pc"/></div>
+<div align="center"><img src="https://github.com/kmac007/wechat-mina/blob/master/preview/mina-3.gif" alt="pc"/></div>
+
+# 总结
+总的来说，小程序上手起来还是相当的简单的。小程序官方内置了很多常用的组件，比如swpier等，可以直接通过调用相应的组件快速完成一个应用。生命周期函数也十分浅显易懂。
+
+它通过setData()进行数据的更新，这个方法是异步的，这让我想起了React.js中的setState()方法，我还没有深入研究，但感觉这两者十分的相似。
+
+有人说数据绑定方面有点像angular，但由于我还没有用过angular，所以不作对比。与Vue相比，列表循环、条件判断、数据绑定，十分相似。
+
+这个项目主要是学习小程序时写的练手项目，样式直接参照了豆瓣官方的豆瓣评分小程序。
